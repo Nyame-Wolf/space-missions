@@ -1,38 +1,129 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+*:visited {
+  color: #5b5b5b;
+}
+
+:root {
+  --roboto: 'Roboto Slab', serif;
+  --monserrat: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--roboto);
+  background: #fafafa;
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #2f2f2f;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.list-container {
+  margin-top: 3rem;
+  width: 100%;
+  max-height: 450px;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.list-container ul {
+  width: 100%;
+}
+
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #2f2f2f;
+  align-items: center;
+  width: 30%;
+  max-width: 1200px;
+}
+
+.categories-container h2,
+.categories-container button {
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.categories-container h2 {
+  height: 30%;
+  margin: 1rem 0;
+  font-family: var(--roboto);
+  font-size: 3rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.categories-container button {
+  cursor: pointer;
+  width: 60%;
+  height: 2rem;
+  text-transform: uppercase;
+  background-color: #0290ff;
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: var(--roboto);
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+}
+
+.construction-icon {
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 650px) {
+  .app-container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .categories-container {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .list-container {
+    justify-content: center;
+    margin-top: 1rem;
+    width: 95%;
+    height: 100%;
+  }
+  .list-container ul {
+    height: 100%;
   }
 }
