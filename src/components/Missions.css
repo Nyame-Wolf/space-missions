@@ -24,6 +24,7 @@ tbody tr:nth-child(odd) {
 
 button {
   font-family: var(--roboto);
+  font-weight: 700;
   background-color: white;
   width: 90px;
   padding: 0.3rem;
@@ -56,7 +57,6 @@ th {
 }
 
 td {
-  padding: 5px 0 35px 5px;
   border-collapse: collapse;
   border: 1px solid #808080;
 }
