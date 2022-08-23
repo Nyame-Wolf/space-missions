@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addMissions, fetchMissions, removeMissions } from '../redux/missions/missionsSlice';
+import { getMissions } from '../redux/missions/missionsSlice';
 import MissionItem from '../components/MissionItem';
 import '../components/Missions.css';
 
@@ -10,17 +10,9 @@ const Missions = () => {
 
   useEffect(() => {
     if (!missions.length) {
-      dispatch(fetchMissions());
+      dispatch(getMissions());
     }
   }, []);
-
-  const onAddMissions = (specificID) => {
-    dispatch(addMissions(specificID));
-  };
-
-  const onRemoveMissions = (specificID) => {
-    dispatch(removeMissions(specificID));
-  };
 
   return (
     <div className="missions-page">
@@ -36,13 +28,8 @@ const Missions = () => {
         <tbody>
           {missions.map((mission) => (
             <MissionItem
-              key={mission.id}
-              id={mission.id}
-              name={mission.name}
-              description={mission.description}
-              reserved={mission.reserved}
-              onAddMission={onAddMissions}
-              onRemoveMission={onRemoveMissions}
+              key={mission.mission_id}
+              mission={mission}
             />
           ))}
         </tbody>
