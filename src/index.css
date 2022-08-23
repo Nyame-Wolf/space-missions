@@ -25,3 +25,32 @@ code {
     'Courier New',
     monospace;
 }
+
+.rocket-img {
+  width: 20%;
+}
+
+.rocket-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.rockets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.reserve-btn {
+  width: 11.5rem;
+  height: 2.063rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
