@@ -1,5 +1,5 @@
 nav {
-  font-family: var(--monserrat);
+  font-family: var(--roboto);
   position: fixed;
   top: 0;
   left: 0;
@@ -9,65 +9,54 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid #fff;
   z-index: 9;
+  box-shadow: 1px 1px 6px #00000040;
 }
 
 .navContainer {
   display: flex;
   justify-content: space-between;
-  color: #2f2f2f;
   align-items: center;
-  width: 80%;
-  max-width: 1200px;
+  width: 90%;
+}
+
+.navContainer img {
+  width: 70px;
+  height: auto;
+  margin: 5px;
 }
 
 .navLinks {
-  width: 54%;
+  font-family: var(--monserrat);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
+  flex: 3;
+  color: #0290ff;
 }
 
 .NavLink {
   text-transform: uppercase;
-  width: 3.688rem;
   height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: var(--monserrat);
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: #121212;
+  text-align: center;
 }
 
 .logo {
-  color: #0290ff;
-  font-size: 1.875rem;
+  flex: 4;
+  color: #000;
+  font-size: 1.5rem;
 }
 
 .active {
   font-weight: 700;
-}
-
-.profile-container {
-  cursor: pointer;
-  width: 2.813rem;
-  height: 2.813rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  border: 1px solid #e8e8e8;
-}
-
-.profile-icon {
-  width: 1.063rem;
-  height: 1.063rem;
-  color: #0290ff;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 650px) {
@@ -91,10 +80,5 @@ nav {
   .logo {
     flex: 3;
     font-size: 1rem;
-  }
-
-  .profile-container {
-    width: 1.8rem;
-    height: 1.8rem;
   }
 }
