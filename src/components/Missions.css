@@ -1,0 +1,121 @@
+.missions-page {
+  margin-top: 90px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  color: #000;
+  font-family: var(--roboto);
+}
+
+table {
+  width: 100%;
+  border: 1px solid #aca9a970;
+  margin-top: 20px;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #d9d9d9;
+  margin: 0;
+}
+
+button {
+  font-family: var(--roboto);
+  background-color: white;
+  width: 90px;
+  padding: 0.3rem;
+  border: 1.5px solid #919191;
+  border-radius: 0.15rem;
+  margin: 1rem;
+}
+
+th {
+  padding: 20px;
+  font-size: 1.4rem;
+  border: 1px solid #808080;
+}
+
+.name {
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.description {
+  line-height: 1.2;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--monserrat);
+  word-spacing: 2px;
+  text-align: justify;
+  padding: 1rem 1.2rem;
+}
+
+td {
+  padding: 5px 0 35px 5px;
+  border-collapse: collapse;
+  border: 1px solid #808080;
+}
+
+span {
+  display: inline-block;
+  width: 90px;
+  border: 1.5px solid #000;
+  margin: 0.8rem;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 0.15rem;
+}
+
+.not-member {
+  background-color: #818181;
+  padding: 8px;
+}
+
+.join {
+  padding: 8px;
+}
+
+.join:hover {
+  cursor: pointer;
+}
+
+.active-member {
+  background-color: #21b4e5;
+  padding: 8px;
+}
+
+.leave-mission {
+  color: #c60101;
+  border: 1px solid #4b0101;
+  padding: 8px;
+}
+
+.leave-mission:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .missions-page {
+    display: unset;
+  }
+
+  th {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
