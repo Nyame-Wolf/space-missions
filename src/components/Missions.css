@@ -84,6 +84,7 @@ span {
 
 .join:hover {
   cursor: pointer;
+  background-color: #b5f0d8;
 }
 
 .active-member {
@@ -99,6 +100,7 @@ span {
 
 .leave-mission:hover {
   cursor: pointer;
+  background-color: #efcccc;
 }
 
 @media (max-width: 600px) {
