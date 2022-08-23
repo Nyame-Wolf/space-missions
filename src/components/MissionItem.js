@@ -9,7 +9,12 @@ const MissionItem = (props) => {
   return (
     <tr>
       <td className="name">{mission.mission_name}</td>
-      <td className="description">{mission.description}</td>
+      <td className="description">
+        {mission.description}
+        <a href={mission.wikipedia} target="blanc">
+          🔗
+        </a>
+      </td>
       <td>
         <span className={mission.reserved ? 'active-member' : 'not-member'}>
           {mission.reserved ? 'Active Member' : 'Not A Member'}
@@ -35,6 +40,7 @@ MissionItem.propTypes = {
       mission_name: PropTypes.string,
       description: PropTypes.string,
       reserved: PropTypes.bool,
+      wikipedia: PropTypes.string,
     },
   ).isRequired,
 };
