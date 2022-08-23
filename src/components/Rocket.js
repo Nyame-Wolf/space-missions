@@ -9,10 +9,12 @@ const Rocket = (props) => {
     <div>
       <div className="rocket-container">
         <img src={rocket.flickr_images} alt="rocket" className="rocket-img" />
+
         <div className="text-style">
-          <h3>{rocket.rocket_name}</h3>
+          <h3>{rocket.reserved ? `(reserved)${rocket.rocket_name} ` : rocket.rocket_name}</h3>
+
           <p>{rocket.description}</p>
-          <button className="reserve-btn" type="button" onClick={() => dispatch(reserve({ rocket }))}>{rocket.reserved ? 'Cancel Reservation' : 'Reserver' }</button>
+          <button className="reserve-btn" type="button" onClick={() => dispatch(reserve({ rocket }))}>{rocket.reserved ? 'Cancel Reservation' : 'Reserve' }</button>
         </div>
       </div>
     </div>
@@ -22,6 +24,7 @@ const Rocket = (props) => {
 Rocket.propTypes = {
   rocket: PropTypes.shape(
     {
+      id: PropTypes.string,
       rocket_name: PropTypes.string,
       description: PropTypes.string,
       reserved: PropTypes.bool,
