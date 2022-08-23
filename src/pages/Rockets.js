@@ -1,43 +1,36 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import Rocket from '../components/Rocket';
 import { getRockets } from '../redux/rockets/rockets';
 
-export const Rockets = (props) => (
+export default function Rockets({ rocketFilter }) {
+  const dispatch = useDispatch();
+  const rockets = useSelector((state) => state.rockets);
 
-  <div className="rocket-list">
-    <div className="rockets-container">
-      {props.rockets.map((rocket) => (
-        <ul key={rocket.id}>
-          <Rocket rocket={rocket} />
-        </ul>
-      ))}
+  useEffect(() => {
+    if (!rockets.length) {
+      dispatch(getRockets());
+    }
+  }, []);
+
+  return (
+
+    <div className="rocket-list">
+      <div className="rockets-container">
+        {rockets.filter(rocketFilter).map((rocket) => (
+          <ul key={rocket.id}>
+            <Rocket rocket={rocket} />
+          </ul>
+        ))}
+      </div>
     </div>
-  </div>
-);
-
-export function MyRockets() {
-  const dispatch = useDispatch();
-  const rockets = useSelector((state) => state.rockets);
-
-  useEffect(() => {
-    dispatch(getRockets());
-  }, []);
-
-  return (
-    <Rockets rockets={rockets.filter((rocket) => rocket.reserved)} />
   );
 }
 
-export default function AllRockets() {
-  const dispatch = useDispatch();
-  const rockets = useSelector((state) => state.rockets);
-
-  useEffect(() => {
-    dispatch(getRockets());
-  }, []);
-
-  return (
-    <Rockets rockets={rockets} />
-  );
-}
+Rockets.propTypes = {
+  rocketFilter: PropTypes.func,
+};
+Rockets.defaultProps = {
+  rocketFilter: Boolean,
+};
