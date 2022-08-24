@@ -8,9 +8,14 @@
 # Space Travelers 🚀 🛸
 > Wep App to get information about space travel missions and vehicles.
 
+Thanks for the logo image to:
+[Planet icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/planet)
 
-<!-- ## Static Deploy
-- [Github Pages](https://raminka13.github.io/bookstore) -->
+Thanks for the [SpaceX API](https://api.spacexdata.com/v3/).
+
+## Static Deploy
+[![Netlify Status](https://api.netlify.com/api/v1/badges/104f5581-0998-46cd-9b11-df81ddea2dea/deploy-status)](https://app.netlify.com/sites/space-traverlers-raminka-nyame/deploys)
+- [Netlify](https://space-traverlers-raminka-nyame.netlify.app/)
 
 ## Tech ⌘⇧
 - **HTML & CSS best practices:** Correct use of tags, elements, properties and syntax.
