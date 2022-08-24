@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions page component testing using snapshots Test Missions component renders 1`] = `
+<div
+  className="missions-page"
+>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Mission
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Status
+        </th>
+        <th>
+          Join
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
