@@ -14,7 +14,7 @@ table {
   border: 1px solid #aca9a970;
   margin-top: 20px;
   border-collapse: collapse;
-  overflow: hidden;
+  overflow: auto;
 }
 
 tbody tr:nth-child(odd) {
@@ -104,21 +104,16 @@ span {
   background-color: #efcccc;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .missions-page {
-    display: unset;
-  }
-
-  th {
-    font-size: 1rem;
-    padding: 10px;
+    width: 100%;
   }
 
   .name {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .description {
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
 }
