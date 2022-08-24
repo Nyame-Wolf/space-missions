@@ -13,10 +13,15 @@ function Navigation() {
     {
       id: 2,
       path: '/missions',
-      text: 'Mission',
+      text: 'Missions',
     },
     {
       id: 3,
+      path: '/dragons',
+      text: 'Dragons',
+    },
+    {
+      id: 4,
       path: '/profile',
       text: 'My Profile',
     },

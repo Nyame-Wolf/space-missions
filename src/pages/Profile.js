@@ -1,13 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { reserveMission } from '../redux/missions/missionsSlice';
+import { reserveDragon } from '../redux/dragons/dragonsSlice';
 import '../components/Profile.css';
 import { reserve } from '../redux/rockets/rockets';
 
 const Profile = () => {
   const dispatch = useDispatch();
   const missionList = useSelector((state) => state.missions);
+  const dragonList = useSelector((state) => state.dragons);
   const rockets = useSelector((state) => state.rockets);
   const missionReserved = missionList.filter((mission) => mission.reserved === true);
+  const dragonReserved = dragonList.filter((dragon) => dragon.reserved === true);
   const rocketsReserved = rockets.filter((rocket) => rocket.reserved === true);
 
   return (
@@ -30,6 +33,28 @@ const Profile = () => {
                 onClick={() => dispatch(reserve({ rocket }))}
               >
                 {rocket.reserved ? 'Cancel Rocket' : 'Join Rocket' }
+              </button>
+            </li>
+          ))}
+      </ul>
+      <ul className="missions-profile">
+        <h2>Dragons Reserved</h2>
+        {dragonReserved.length === 0
+          ? <li className="no-mission">No Dragons Reserved</li>
+          : dragonReserved.map((dragon) => (
+            <li key={dragon.id} className="mission-wrapper">
+              <h4 className="name">
+                {dragon.name}
+                <a href={dragon.wikipedia} target="blanc">
+                  ➕
+                </a>
+              </h4>
+              <button
+                className={dragon.reserved ? 'leave-mission' : 'join'}
+                type="button"
+                onClick={() => dispatch(reserveDragon({ dragon }))}
+              >
+                {dragon.reserved ? 'Cancel Dragon' : 'Reserve Dragon' }
               </button>
             </li>
           ))}

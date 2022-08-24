@@ -1,10 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Missions from './pages/Missions';
-import './App.css';
-import Profile from './pages/Profile';
 import Rockets from './pages/Rockets';
+import Missions from './pages/Missions';
+import Dragons from './pages/Dragons';
+import Profile from './pages/Profile';
+import './App.css';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />
+        <Route path="/dragons" element={<Dragons />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
