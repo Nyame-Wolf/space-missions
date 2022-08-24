@@ -1,0 +1,84 @@
+nav {
+  font-family: var(--roboto);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  z-index: 9;
+  box-shadow: 1px 1px 6px #00000040;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.navContainer img {
+  width: 70px;
+  height: auto;
+  margin: 15px;
+}
+
+.navLinks {
+  font-family: var(--monserrat);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 3;
+  color: #0290ff;
+}
+
+.NavLink {
+  text-transform: uppercase;
+  height: 1rem;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  text-align: center;
+}
+
+.logo {
+  flex: 4;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 650px) {
+  .navContainer {
+    width: 90%;
+  }
+
+  .navLinks {
+    flex: 5;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: center;
+  }
+
+  .NavLink {
+    margin: 0;
+    padding: 0;
+    font-size: 0.63rem;
+  }
+
+  .logo {
+    flex: 3;
+    font-size: 1rem;
+  }
+}
