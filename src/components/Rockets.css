@@ -1,0 +1,90 @@
+.rockets-container {
+  margin-top: 110px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  color: #000;
+  font-family: var(--roboto);
+}
+
+.rockets-list {
+  width: 100%;
+}
+
+.rockets-list li + li {
+  margin-top: 1rem;
+}
+
+.rocket-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rocket-img {
+  width: 20%;
+  height: 100%;
+  flex: 3;
+}
+
+.text-style {
+  flex: 6;
+  margin-left: 1rem;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text-style h3 {
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.text-style p {
+  line-height: 1.2;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--monserrat);
+  word-spacing: 2px;
+  text-align: justify;
+  padding: 1rem 1.2rem;
+}
+
+.reserve,
+.cancel-rocket {
+  cursor: pointer;
+  width: 12rem;
+  height: 2.2rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: var(--roboto);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.reserve:hover {
+  background-color: #43a8f5;
+}
+
+.cancel-rocket {
+  color: #c60101;
+  background-color: #efcccc;
+  border: 1px solid #4b0101;
+}
+
+.reserved-success {
+  background: #b5f0d8;
+  color: #000;
+  border: none;
+  padding: 3px 5px;
+  margin: 0;
+}

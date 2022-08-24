@@ -84,11 +84,12 @@ span {
 
 .join:hover {
   cursor: pointer;
-  background-color: #b5f0d8;
+  background-color: #21b4e5;
 }
 
 .active-member {
-  background-color: #21b4e5;
+  background-color: #b5f0d8;
+  color: #000;
   padding: 8px;
 }
 
