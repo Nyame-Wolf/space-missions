@@ -13,7 +13,7 @@
   width: 100%;
 }
 
-.rockets-list li+li{
+.rockets-list li + li {
   margin-top: 1rem;
 }
 
