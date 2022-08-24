@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
+
 import Rocket from '../components/Rocket';
 import { getRockets } from '../redux/rockets/rockets';
 import '../components/Rockets.css';
 
-export default function Rockets({ rocketFilter }) {
+export default function Rockets() {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets);
 
@@ -19,7 +19,7 @@ export default function Rockets({ rocketFilter }) {
 
     <div className="rockets-container">
       <ul className="rockets-list">
-        {rockets.filter(rocketFilter).map((rocket) => (
+        {rockets.map((rocket) => (
           <li key={rocket.id}>
             <Rocket rocket={rocket} />
           </li>
@@ -28,10 +28,3 @@ export default function Rockets({ rocketFilter }) {
     </div>
   );
 }
-
-Rockets.propTypes = {
-  rocketFilter: PropTypes.func,
-};
-Rockets.defaultProps = {
-  rocketFilter: Boolean,
-};
