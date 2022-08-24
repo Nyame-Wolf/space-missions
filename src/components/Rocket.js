@@ -10,8 +10,18 @@ const Rocket = (props) => {
     <div className="rocket-container">
       <img src={rocket.flickr_images} alt="rocket" className="rocket-img" />
       <div className="text-style">
-        <h3>{rocket.reserved ? `${rocket.rocket_name} (reserved)` : rocket.rocket_name}</h3>
-        <p>{rocket.description}</p>
+        <h3>{rocket.rocket_name }</h3>
+        <div>
+          {rocket.reserved
+            ? (
+              <p>
+                <span className="reserved-success">reserved</span>
+                {' '}
+                {rocket.description}
+              </p>
+            )
+            : <p>{rocket.description}</p>}
+        </div>
         <button className={rocket.reserved ? 'cancel-rocket' : 'reserve'} type="button" onClick={() => dispatch(reserve({ rocket }))}>{rocket.reserved ? 'Cancel Reservation' : 'Reserve'}</button>
       </div>
     </div>

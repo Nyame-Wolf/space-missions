@@ -13,7 +13,7 @@
   width: 100%;
 }
 
-.rockets-list li+li{
+.rockets-list li + li {
   margin-top: 1rem;
 }
 
@@ -79,4 +79,12 @@
   color: #c60101;
   background-color: #efcccc;
   border: 1px solid #4b0101;
+}
+
+.reserved-success {
+  background: #b5f0d8;
+  color: #000;
+  border: none;
+  padding: 3px 5px;
+  margin: 0;
 }
