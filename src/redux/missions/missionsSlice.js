@@ -25,7 +25,7 @@ export const missionsSlice = createSlice({
   name: 'missions',
   initialState,
   reducers: {
-    reserve: (state, action) => state.map((mission) => {
+    reserveMission: (state, action) => state.map((mission) => {
       if (mission.mission_id !== action.payload.mission.mission_id) {
         return mission;
       }
@@ -39,5 +39,5 @@ export const missionsSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { reserve } = missionsSlice.actions;
+export const { reserveMission } = missionsSlice.actions;
 export default missionsSlice.reducer;
