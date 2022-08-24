@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets test snapshot for rockets 1`] = `
+<div
+  className="rockets-container"
+>
+  <ul
+    className="rockets-list"
+  />
+</div>
+`;
