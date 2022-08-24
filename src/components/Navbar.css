@@ -21,10 +21,23 @@ nav {
   width: 90%;
 }
 
-.navContainer img {
+.logo-wrapper {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo-wrapper img {
   width: 70px;
   height: auto;
   margin: 15px;
+}
+
+.logo-text {
+  flex: 1;
+  color: #000;
+  font-size: 1.8rem;
 }
 
 .navLinks {
@@ -32,53 +45,64 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex: 3;
+  flex: 2;
   color: #0290ff;
 }
 
 .NavLink {
   text-transform: uppercase;
-  height: 1rem;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: 1.9px;
+  letter-spacing: 1.5px;
   text-align: center;
+  transition: all 100ms ease-in-out;
 }
 
-.logo {
-  flex: 4;
-  color: #000;
-  font-size: 1.5rem;
+.navLinks li:last-child {
+  padding: 0.5rem;
+  background-color: #dce9f2;
+  border: 1px solid #0290ff;
+  border-radius: 3px;
 }
 
-.active {
+.NavLink .active {
   font-weight: 700;
-  text-decoration: underline;
+  color: #0c70bc;
 }
 
 @media screen and (max-width: 650px) {
+  nav {
+    height: 7rem;
+  }
+
   .navContainer {
     width: 90%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .logo-text {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .logo-wrapper img {
+    width: 40px;
+    height: auto;
+    margin: 5px;
   }
 
   .navLinks {
-    flex: 5;
+    width: 100%;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     text-align: center;
   }
 
   .NavLink {
-    margin: 0;
-    padding: 0;
-    font-size: 0.63rem;
-  }
-
-  .logo {
-    flex: 3;
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
 }

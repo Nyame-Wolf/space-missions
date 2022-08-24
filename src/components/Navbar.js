@@ -29,8 +29,10 @@ function Navigation() {
   return (
     <nav>
       <div className="navContainer">
-        <img src={planet} alt="space logo" />
-        <h3 className="logo">Space Travelers Hub</h3>
+        <div className="logo-wrapper">
+          <img src={planet} alt="space logo" />
+          <h3 className="logo-text">Space Travelers Hub</h3>
+        </div>
         <ul className="navLinks">
           {links.map((link) => (
             <li className="NavLink" key={link.id}>

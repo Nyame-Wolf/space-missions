@@ -23,7 +23,7 @@ const Profile = () => {
             <li key={rocket.id} className="mission-wrapper">
               <h4 className="name">
                 {rocket.rocket_name}
-                <a href={rocket.wikipedia} target="blanc">
+                <a href={rocket.wikipedia} target="_blank" rel="noopener noreferrer">
                   ➕
                 </a>
               </h4>
@@ -45,7 +45,7 @@ const Profile = () => {
             <li key={dragon.id} className="mission-wrapper">
               <h4 className="name">
                 {dragon.name}
-                <a href={dragon.wikipedia} target="blanc">
+                <a href={dragon.wikipedia} target="_blank" rel="noopener noreferrer">
                   ➕
                 </a>
               </h4>
@@ -67,7 +67,7 @@ const Profile = () => {
             <li key={mission.mission_id} className="mission-wrapper">
               <h4 className="name">
                 {mission.mission_name}
-                <a href={mission.wikipedia} target="blanc">
+                <a href={mission.wikipedia} target="_blank" rel="noopener noreferrer">
                   ➕
                 </a>
               </h4>
