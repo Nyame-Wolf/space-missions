@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Rocket from '../components/Rocket';
 import { getRockets } from '../redux/rockets/rockets';
+import '../components/Rockets.css';
 
 export default function Rockets({ rocketFilter }) {
   const dispatch = useDispatch();
@@ -16,14 +17,14 @@ export default function Rockets({ rocketFilter }) {
 
   return (
 
-    <div className="rocket-list">
-      <div className="rockets-container">
+    <div className="rockets-container">
+      <ul className="rockets-list">
         {rockets.filter(rocketFilter).map((rocket) => (
-          <ul key={rocket.id}>
+          <li key={rocket.id}>
             <Rocket rocket={rocket} />
-          </ul>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
