@@ -1,0 +1,41 @@
+.profile-page {
+  margin-top: 120px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  color: #000;
+  font-family: var(--roboto);
+}
+
+.missions-profile {
+  flex: 1;
+}
+
+.rockets-profile {
+  flex: 1;
+}
+
+.mission-wrapper {
+  margin-top: 0.5rem;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #919191;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.no-mission {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: #919191;
+  text-align: center;
+  height: 3rem;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
