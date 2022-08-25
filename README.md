@@ -16,6 +16,9 @@ Thanks for the logo image to:
 
 Thanks for the [SpaceX API](https://api.spacexdata.com/v3/).
 
+![](Screenshot-rockets.png)
+![](Screenshot-missions.png)
+
 ## Static Deploy
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/104f5581-0998-46cd-9b11-df81ddea2dea/deploy-status)](https://app.netlify.com/sites/space-traverlers-raminka-nyame/deploys)
