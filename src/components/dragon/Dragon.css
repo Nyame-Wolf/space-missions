@@ -88,22 +88,3 @@
   padding: 3px 5px;
   margin: 0;
 }
-
-@media screen and (max-width: 650px) {
-  .rockets-container {
-    width: 100%;
-  }
-
-  .rocket-container {
-    flex-direction: column;
-  }
-
-  .rocket-img {
-    width: 100%;
-  }
-
-  .text-style {
-    margin: 0;
-    justify-content: center;
-  }
-}

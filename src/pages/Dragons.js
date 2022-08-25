@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDragons } from '../redux/dragons/dragonsSlice';
-import DragonItem from '../components/DragonItem';
-import '../components/Rockets.css';
+import DragonItem from '../components/dragon/DragonItem';
+import '../components/dragon/Dragon.css';
 
 export default function Dragons() {
   const dispatch = useDispatch();
