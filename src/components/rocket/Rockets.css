@@ -1,12 +1,6 @@
 .rockets-container {
-  margin-top: 110px;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 90%;
-  color: #000;
-  font-family: var(--roboto);
+  padding: 150px 0;
 }
 
 .rockets-list {
@@ -87,4 +81,8 @@
   border: none;
   padding: 3px 5px;
   margin: 0;
+}
+
+.profile-nopadding {
+  padding: 0;
 }

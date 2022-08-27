@@ -17,10 +17,16 @@ const Profile = () => {
     <div className="profile-page">
       <ul className="missions-profile">
         <h2>Rockets Reserved</h2>
-        {/* {rocketsReserved.length === 0
-          ? <li className="no-mission">No Rockets Reserved</li> */}
-        <div className="rockets-profile"><Rockets component={MyProfileRocket} rocketFilter={((rocket) => rocket.reserved)} /></div>
+        <div className="rockets-profile">
+          <Rockets
+            className="profile-nopadding"
+            component={MyProfileRocket}
+            rocketFilter={
+          ((rocket) => rocket.reserved)
+}
+          />
 
+        </div>
       </ul>
 
       <ul className="missions-profile">
@@ -35,6 +41,9 @@ const Profile = () => {
                   ➕
                 </a>
               </h4>
+              <a href={dragon.wikipedia} target="_blank" rel="noopener noreferrer">
+                learn more ➕
+              </a>
               <button
                 className={dragon.reserved ? 'leave-mission' : 'join'}
                 type="button"
@@ -53,10 +62,10 @@ const Profile = () => {
             <li key={mission.mission_id} className="mission-wrapper">
               <h4 className="name">
                 {mission.mission_name}
-                <a href={mission.wikipedia} target="_blank" rel="noopener noreferrer">
-                  ➕
-                </a>
               </h4>
+              <a href={mission.wikipedia} target="_blank" rel="noopener noreferrer">
+                learn more ➕
+              </a>
               <button
                 className={mission.reserved ? 'leave-mission' : 'join'}
                 type="button"

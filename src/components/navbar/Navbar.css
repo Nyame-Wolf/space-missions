@@ -1,5 +1,4 @@
 nav {
-  font-family: var(--roboto);
   position: fixed;
   top: 0;
   left: 0;
@@ -9,8 +8,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #fff;
-  z-index: 9;
   box-shadow: 1px 1px 6px #00000040;
 }
 

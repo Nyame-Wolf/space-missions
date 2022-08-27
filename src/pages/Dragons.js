@@ -16,7 +16,7 @@ export default function Dragons() {
 
   return (
 
-    <div className="rockets-container">
+    <div className="dragons-container">
       <ul className="rockets-list">
         {dragons.map((dragon) => (
           <li key={dragon.id}>
