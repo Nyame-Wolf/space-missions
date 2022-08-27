@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { reserve } from '../redux/rockets/rockets';
+import { reserve } from '../../redux/rockets/rockets';
 import './Rockets.css';
 
 const Rocket = (props) => {
@@ -8,18 +8,20 @@ const Rocket = (props) => {
   const { rocket } = props;
   return (
     <div className="rocket-container">
-      <img src={rocket.flickr_images[1]} alt={rocket.rocket_name} className="rocket-img" />
+      <img src={rocket.flickr_images} alt="rocket" className="rocket-img" />
       <div className="text-style">
-        <h3>{rocket.rocket_name}</h3>
-        {rocket.reserved
-          ? (
-            <p>
-              <span className="reserved-success">reserved</span>
-              {' '}
-              {rocket.description}
-            </p>
-          )
-          : <p>{rocket.description}</p>}
+        <h3>{rocket.rocket_name }</h3>
+        <div>
+          {rocket.reserved
+            ? (
+              <p>
+                <span className="reserved-success">reserved</span>
+                {' '}
+                {rocket.description}
+              </p>
+            )
+            : <p>{rocket.description}</p>}
+        </div>
         <button className={rocket.reserved ? 'cancel-rocket' : 'reserve'} type="button" onClick={() => dispatch(reserve({ rocket }))}>{rocket.reserved ? 'Cancel Reservation' : 'Reserve'}</button>
       </div>
     </div>

@@ -1,23 +1,25 @@
 .profile-page {
-  margin-top: 120px;
-  margin-bottom: 2rem;
+  padding: 150px 0;
+  padding-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   width: 60%;
   color: #000;
-  gap: 0.7rem;
   font-family: var(--roboto);
 }
 
 .missions-profile {
   flex: 1;
-  text-align: center;
+}
+
+.rockets-profile {
+  flex: 1;
 }
 
 .mission-wrapper {
   margin-top: 0.5rem;
-  width: 100%;
+  width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,23 +35,7 @@
   text-align: center;
   height: 3rem;
   width: 400px;
-}
-
-@media screen and (max-width: 650px) {
-  .profile-page {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .missions-profile {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-  }
-
-  .mission-wrapper {
-    width: 90%;
-    font-size: 1rem;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -1,12 +1,6 @@
 .rockets-container {
-  margin-top: 110px;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 90%;
-  color: #000;
-  font-family: var(--roboto);
+  padding: 150px 0;
 }
 
 .rockets-list {
@@ -89,21 +83,6 @@
   margin: 0;
 }
 
-@media screen and (max-width: 650px) {
-  .rockets-container {
-    width: 100%;
-  }
-
-  .rocket-container {
-    flex-direction: column;
-  }
-
-  .rocket-img {
-    width: 100%;
-  }
-
-  .text-style {
-    margin: 0;
-    justify-content: center;
-  }
+.profile-nopadding {
+  padding: 0;
 }

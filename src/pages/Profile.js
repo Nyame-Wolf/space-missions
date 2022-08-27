@@ -1,42 +1,34 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { reserveMission } from '../redux/missions/missionsSlice';
 import { reserveDragon } from '../redux/dragons/dragonsSlice';
-import '../components/Profile.css';
-import { reserve } from '../redux/rockets/rockets';
+import '../components/profile/Profile.css';
+import Rockets from './Rockets';
+import MyProfileRocket from '../components/profile/MyProfileRocket';
 
 const Profile = () => {
   const dispatch = useDispatch();
   const missionList = useSelector((state) => state.missions);
   const dragonList = useSelector((state) => state.dragons);
-  const rockets = useSelector((state) => state.rockets);
+
   const missionReserved = missionList.filter((mission) => mission.reserved === true);
   const dragonReserved = dragonList.filter((dragon) => dragon.reserved === true);
-  const rocketsReserved = rockets.filter((rocket) => rocket.reserved === true);
 
   return (
     <div className="profile-page">
       <ul className="missions-profile">
         <h2>Rockets Reserved</h2>
-        {rocketsReserved.length === 0
-          ? <li className="no-mission">No Rockets Reserved</li>
-          : rocketsReserved.map((rocket) => (
-            <li key={rocket.id} className="mission-wrapper">
-              <h4 className="name">
-                {rocket.rocket_name}
-                <a href={rocket.wikipedia} target="_blank" rel="noopener noreferrer">
-                  ➕
-                </a>
-              </h4>
-              <button
-                className={rocket.reserved ? 'leave-mission' : 'join'}
-                type="button"
-                onClick={() => dispatch(reserve({ rocket }))}
-              >
-                {rocket.reserved ? 'Cancel Rocket' : 'Join Rocket' }
-              </button>
-            </li>
-          ))}
+        <div className="rockets-profile">
+          <Rockets
+            className="profile-nopadding"
+            component={MyProfileRocket}
+            rocketFilter={
+          ((rocket) => rocket.reserved)
+}
+          />
+
+        </div>
       </ul>
+
       <ul className="missions-profile">
         <h2>Dragons Reserved</h2>
         {dragonReserved.length === 0
@@ -49,6 +41,9 @@ const Profile = () => {
                   ➕
                 </a>
               </h4>
+              <a href={dragon.wikipedia} target="_blank" rel="noopener noreferrer">
+                learn more ➕
+              </a>
               <button
                 className={dragon.reserved ? 'leave-mission' : 'join'}
                 type="button"
@@ -67,10 +62,10 @@ const Profile = () => {
             <li key={mission.mission_id} className="mission-wrapper">
               <h4 className="name">
                 {mission.mission_name}
-                <a href={mission.wikipedia} target="_blank" rel="noopener noreferrer">
-                  ➕
-                </a>
               </h4>
+              <a href={mission.wikipedia} target="_blank" rel="noopener noreferrer">
+                learn more ➕
+              </a>
               <button
                 className={mission.reserved ? 'leave-mission' : 'join'}
                 type="button"

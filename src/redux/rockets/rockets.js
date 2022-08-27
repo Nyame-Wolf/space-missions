@@ -1,6 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const initialState = [];
+const initialState = {
+  rockets: [],
+  lifecycle: { loading: 'initial' },
+};
 
 export const getRockets = createAsyncThunk(
   'rockets/getRockets',
@@ -24,17 +27,31 @@ export const rocketSlice = createSlice({
   initialState,
   reducers: {
 
-    reserve: (state, action) => state.map((rocket) => {
-      if (rocket.id !== action.payload.rocket.id) {
-        return rocket;
-      }
-      return { ...rocket, reserved: !rocket.reserved };
+    reserve: (state, action) => ({
+      ...state,
+      rockets: state.rockets.map((rocket) => {
+        if (rocket.id !== action.payload.rocket.id) {
+          return rocket;
+        }
+        return { ...rocket, reserved: !rocket.reserved };
+      }),
     }),
 
   },
   extraReducers: (builder) => {
     // Add reducers for additional action types here, and handle loading state as needed
-    builder.addCase(getRockets.fulfilled, (state, action) => action.payload);
+    builder
+      .addCase(
+        getRockets.fulfilled,
+        (state, action) => ({ lifecycle: { loading: 'initial' }, rockets: action.payload }),
+      )
+      .addCase(
+        getRockets.pending,
+        (state) => ({ lifecycle: { loading: 'pending' }, rockets: state.rockets }),
+      ).addCase(
+        getRockets.rejected,
+        (state) => ({ lifecycle: { loading: 'rejected' }, rockets: state.rockets }),
+      );
   },
 
 });

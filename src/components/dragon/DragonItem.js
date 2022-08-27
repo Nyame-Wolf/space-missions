@@ -1,15 +1,15 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { reserveDragon } from '../redux/dragons/dragonsSlice';
+import { reserveDragon } from '../../redux/dragons/dragonsSlice';
 
 const DragonItem = (props) => {
   const dispatch = useDispatch();
   const { dragon } = props;
   return (
     <div className="rocket-container">
-      <img src={dragon.flickr_images[1]} alt={dragon.name} className="rocket-img" />
+      <img src={dragon.flickr_images} alt="dragon" className="rocket-img" />
       <div className="text-style">
-        <h3>{dragon.name}</h3>
+        <h3>{dragon.name }</h3>
         <div>
           {dragon.reserved
             ? (

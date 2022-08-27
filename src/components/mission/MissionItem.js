@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { reserveMission } from '../redux/missions/missionsSlice';
+import { reserveMission } from '../../redux/missions/missionsSlice';
 import './Missions.css';
 
 const MissionItem = (props) => {
